@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh5lme2hm5b4o"]
+
+[ext_resource type="Script" uid="uid://cq6ealtyt8ijt" path="res://Scripts/reddy.gd" id="1_abwdn"]
+[ext_resource type="Texture2D" uid="uid://ca5f254vltftf" path="res://pics/angryreddy.png" id="2_0wqfn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_abwdn"]
+radius = 9.0
+
+[node name="reddy" type="CharacterBody2D"]
+script = ExtResource("1_abwdn")
+
+[node name="Angryreddy" type="Sprite2D" parent="."]
+position = Vector2(1, 2)
+texture = ExtResource("2_0wqfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_abwdn")

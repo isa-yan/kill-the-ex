@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ofec1vf0kd3l"]
+
+[ext_resource type="Script" uid="uid://cx2u8ay1dbr7" path="res://Scripts/izzy.gd" id="1_25ljj"]
+[ext_resource type="Texture2D" uid="uid://bplgo3py264lk" path="res://pics/izie.png" id="2_vayl8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_payrn"]
+size = Vector2(43, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lr36r"]
+size = Vector2(53.75, 153.125)
+
+[node name="izzy" type="CharacterBody2D"]
+script = ExtResource("1_25ljj")
+
+[node name="Izie_body" type="Sprite2D" parent="."]
+position = Vector2(11, 1)
+scale = Vector2(1.72, 1.64)
+texture = ExtResource("2_vayl8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_payrn")
+
+[node name="izzyarea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="izzyarea"]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_lr36r")
+
+[connection signal="body_entered" from="izzyarea" to="." method="_on_izzyarea_body_entered"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx6chm5ss1a1j"]
+
+[ext_resource type="Script" uid="uid://dp1qrna1ywaxs" path="res://Scripts/label.gd" id="1_8wl12"]
+[ext_resource type="Script" uid="uid://b8fwuaqv1hkml" path="res://Scripts/healthbar.gd" id="2_vjxg4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qc6vu"]
+
+[node name="healththing" type="Area2D"]
+
+[node name="healthtext" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 23.0
+offset_right = 107.0
+offset_bottom = 46.0
+text = "Health: 0"
+label_settings = SubResource("LabelSettings_qc6vu")
+uppercase = true
+script = ExtResource("1_8wl12")
+
+[node name="healthbar" type="ProgressBar" parent="."]
+offset_left = 29.0
+offset_top = 46.0
+offset_right = 243.0
+offset_bottom = 73.0
+script = ExtResource("2_vjxg4")
